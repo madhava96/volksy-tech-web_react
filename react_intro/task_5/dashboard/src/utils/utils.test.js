@@ -1,17 +1,30 @@
 import React from 'react';
-import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
+import { act } from 'react-dom/test-utils';
+import { getFullYear, getFooterCopy, getLatestNotification } from './utils'
 
-it('getFullYear', () => {
-  expect(getFullYear()).toEqual(new Date().getFullYear());
+
+// test to check getFullYear returns correct year
+test('getFullYear returns correct year', () => {
+	  expect(getFullYear()).toBe(2022);
 });
-it('getFooterCopy with true', () => {
-  expect(getFooterCopy(true)).toEqual('Holberton School');
+
+
+// test to check that getFooter returns correct string
+// when arg is false
+test('getFooter returns correct string if false', () => {
+	  expect(getFooterCopy(false)).toBe('Holberton School main dashboard');
 });
-it('getFooterCopy with false', () => {
-  expect(getFooterCopy(false)).toEqual('Holberton School main dashboard');
+
+// test to check that getFooter returns correct string
+// when arg is true
+test('getFooter returns correct string if true', () => {
+	expect(getFooterCopy(true)).toBe('Holberton School');
 });
-it('getLatestNotification', () => {
-  expect(getLatestNotification()).toEqual(
-    '<strong>Urgent requirement</strong> - complete by EOD'
-  );
+
+
+
+// test to check that getLatestNotification returns correct
+// html string
+test('getLatestNotification returns correct html string', () => {
+	  expect(getLatestNotification().__html).toBe('<strong>Urgent requirement</strong> - complete by EOD');
 });

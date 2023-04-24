@@ -1,10 +1,16 @@
+:root {
+	--primar-color: #E11D3F;
+}
+
 .Notifications {
-  border: thin dotted #e0344a;
-  padding: 16px;
+	border: 1px solid var(--primar-color);
+	padding: 1rem;
 }
-ul li[data-priority='urgent'] {
-  color: red;
+
+[data-priority="default"] {
+	color: blue;
 }
-ul li[data-priority='default'] {
-  color: blue;
+
+[data-priority="urgent"] {
+	color: red;
 }
