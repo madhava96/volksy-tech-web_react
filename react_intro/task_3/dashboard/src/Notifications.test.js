@@ -1,4 +1,4 @@
-mport { shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Notifications from './Notifications';
 
 const wrapper = shallow(<Notifications />);
