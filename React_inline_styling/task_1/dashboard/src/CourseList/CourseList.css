@@ -1,8 +1,13 @@
-tr th {
-    border-bottom: 1px solid grey;
+.course-list th[colspan='2'] {
+  text-align: center;
 }
 
-tbody,
-thead tr:nth-child(2) {
-    text-align: left;
+.course-list th {
+  text-align: left;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.course-list td {
+  text-align: left;
 }
